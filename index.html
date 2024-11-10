@@ -11,18 +11,19 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7fb;
-            color: #333;
+            background-color: #0088cc; /* Blue color similar to Telegram */
+            color: #fff; /* White text color */
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-height: 100vh;
         }
 
         /* Header Section with Full-Width Image - 16:9 Aspect Ratio */
         .header-image {
             width: 100%;
             height: 56.25vw; /* 16:9 aspect ratio */
-            background-image: url('https://via.placeholder.com/1920x1080');
+            background-image: url('https://i.suar.me/y4AAm/l'); /* رابط الصورة المضاف */
             background-size: cover;
             background-position: center;
             border-bottom: 5px solid #0088cc;
@@ -34,10 +35,29 @@
             position: absolute;
             bottom: 20px;
             left: 20px;
-            color: white;
+            color: #f0b90d; /* Binance yellow color */
             font-size: 2.5em;
             font-weight: bold;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Back Button Styling */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #fff; /* White button */
+            color: #000; /* Black text */
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+            z-index: 10; /* Ensure the back button is above the image */
+        }
+
+        .back-button:hover {
+            background-color: #f1f1f1; /* Slight gray on hover */
         }
 
         /* Article Content */
@@ -49,6 +69,7 @@
             margin-top: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 80px; /* Added margin to create space before the button */
         }
 
         /* Paragraph Styling */
@@ -57,25 +78,37 @@
             line-height: 1.6;
             margin-bottom: 20px;
             text-align: justify;
+            color: #000; /* Black text color for the article */
         }
 
-        /* Back Button */
-        .back-button {
+        /* Title Styling (Set blue color similar to Telegram) */
+        .article-container h2 {
+            color: #0088cc; /* Telegram-like blue color */
+        }
+
+        /* Click To Join Button */
+        .click-to-join {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #0088cc;
-            color: #fff;
+            background-color: #fff; /* White button */
+            color: #000; /* Black text */
             text-decoration: none;
             border-radius: 5px;
             font-size: 1.1em;
             transition: background-color 0.3s;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            text-align: center;
         }
 
-        .back-button:hover {
-            background-color: #006fa3;
+        .click-to-join:hover {
+            background-color: #f1f1f1; /* Slight gray on hover */
         }
 
-        /* Footer Navigation */
+        /* Footer Navigation (Removed Home, Launch, News buttons) */
         .footer-nav {
             position: fixed;
             bottom: 0;
@@ -83,7 +116,7 @@
             width: 100%;
             display: flex;
             justify-content: space-around;
-            background-color: #0088cc;
+            background-color: #0088cc; /* Blue color similar to Telegram */
             padding: 10px 0;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
         }
@@ -105,14 +138,33 @@
             margin-bottom: 5px;
         }
 
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header-content {
+                font-size: 1.8em;
+            }
+
+            .article-container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .click-to-join {
+                width: 150px;
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Back Button -->
+    <a href="previous-page.html" class="back-button">Back</a>
+
     <!-- Header Image Section -->
     <div class="header-image">
         <div class="header-content">
-            New Verified Telegram Bots
+            New Airdrop Free+
         </div>
     </div>
 
@@ -122,14 +174,14 @@
         <p>We are thrilled to announce the latest additions to our verified Telegram bots list. These bots have passed rigorous tests to ensure reliability, security, and functionality. Our verification process includes checking for authenticity, user feedback, and security protocols...</p>
         <p>With new bots ranging from productivity tools to entertainment, we strive to enhance your Telegram experience with automation, entertainment, and valuable resources. These bots are designed to make your tasks easier and more enjoyable, bringing efficiency right to your fingertips...</p>
         <p>We are excited to continue expanding our collection of verified bots in the coming months. Stay tuned for more updates!</p>
-        <a href="news.html" class="back-button">Back to News</a>
     </div>
 
-    <!-- Footer Navigation -->
+    <!-- Click To Join Button -->
+    <a href="news.html" class="click-to-join">Click To Join</a>
+
+    <!-- Footer Navigation (Removed Home, Launch, News buttons) -->
     <div class="footer-nav">
-        <a href="index.html"><i class="fas fa-home"></i> Home</a>
-        <a href="launch.html"><i class="fas fa-rocket"></i> Launch</a>
-        <a href="news.html"><i class="fas fa-newspaper"></i> News</a>
+        <!-- Footer now has no links -->
     </div>
 
 </body>
